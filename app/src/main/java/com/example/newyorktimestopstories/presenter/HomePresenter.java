@@ -76,7 +76,7 @@ public class HomePresenter {
                 .subscribeWith(new DisposableObserver<String>() {
                     @Override
                     public void onNext(String s) {
-                        if (!"".equals(s)) {
+                        if (view!=null && !"".equals(s)) {
                             view.setSections(Section.toSections(s));
                         }
                     }

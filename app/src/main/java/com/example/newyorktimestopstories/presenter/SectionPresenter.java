@@ -65,13 +65,17 @@ public class SectionPresenter {
                                 stories.add(story);
                             }
                         }
-
-                        view.setStories(stories);
+                        if (view!=null) {
+                            view.setStories(stories);
+                        }
 
                     }
 
                     @Override
                     public void onError(Throwable throwable) {
+                        if (view!=null){
+                            view.showError();
+                        }
                     }
 
                     @Override

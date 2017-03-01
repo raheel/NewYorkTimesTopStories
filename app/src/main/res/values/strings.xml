@@ -7,4 +7,5 @@
 
     <string name="action_settings">Settings</string>
     <string name="read_more">Read More</string>
+    <string name="unable_stories">Unable to retrieve stories from the server.  Can you verify you have network connectivity?</string>
 </resources>

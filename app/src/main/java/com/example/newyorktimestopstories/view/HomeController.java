@@ -71,6 +71,7 @@ public class HomeController extends ButterKnifeController implements HomeView{
     @Override
     protected void onDestroyView(@NonNull View view) {
         super.onDestroyView(view);
+        presenter.unBindView();
     }
 
     @Override

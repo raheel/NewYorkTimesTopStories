@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.bluelinelabs.conductor.changehandler.FadeChangeHandler;
@@ -107,5 +108,10 @@ public class SectionController extends ButterKnifeController implements SectionV
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         adapter.setStories(stories);
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void showError() {
+        Toast.makeText(context, context.getText(R.string.unable_stories), Toast.LENGTH_LONG).show();
     }
 }

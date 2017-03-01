@@ -10,4 +10,5 @@ import java.util.List;
 
 public interface SectionView {
     public void setStories(List<Story> stories);
+    public void showError();
 }

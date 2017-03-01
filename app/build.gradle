@@ -16,7 +16,7 @@ android {
     }
     buildTypes {
         all {
-            buildConfigField "String", 'NYTIMES_API_KEY', '"c072d5cb25b345e18bd508fe3cb90905"'
+            buildConfigField "String", 'NYTIMES_API_KEY', '""'
         }
 
         release {
