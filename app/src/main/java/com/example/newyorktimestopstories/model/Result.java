@@ -206,4 +206,27 @@ public class Result {
         this.shortUrl = shortUrl;
     }
 
+    @Override
+    public String toString() {
+        return "Result{" +
+                "section='" + section + '\'' +
+                ", subsection='" + subsection + '\'' +
+                ", title='" + title + '\'' +
+                ", _abstract='" + _abstract + '\'' +
+                ", url='" + url + '\'' +
+                ", byline='" + byline + '\'' +
+                ", itemType='" + itemType + '\'' +
+                ", updatedDate='" + updatedDate + '\'' +
+                ", createdDate='" + createdDate + '\'' +
+                ", publishedDate='" + publishedDate + '\'' +
+                ", materialTypeFacet='" + materialTypeFacet + '\'' +
+                ", kicker='" + kicker + '\'' +
+                ", desFacet=" + desFacet +
+                ", orgFacet=" + orgFacet +
+                ", perFacet=" + perFacet +
+                ", geoFacet=" + geoFacet +
+                ", multimedia=" + multimedia +
+                ", shortUrl='" + shortUrl + '\'' +
+                '}';
+    }
 }

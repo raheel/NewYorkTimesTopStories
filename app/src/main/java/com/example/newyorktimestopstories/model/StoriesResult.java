@@ -74,4 +74,15 @@ public class StoriesResult {
         this.results = results;
     }
 
+    @Override
+    public String toString() {
+        return "StoriesResult{" +
+                "status='" + status + '\'' +
+                ", copyright='" + copyright + '\'' +
+                ", section='" + section + '\'' +
+                ", lastUpdated='" + lastUpdated + '\'' +
+                ", numResults=" + numResults +
+                ", results=" + results +
+                '}';
+    }
 }

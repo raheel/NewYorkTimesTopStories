@@ -15,17 +15,19 @@ android {
         }
     }
     buildTypes {
+        all {
+            buildConfigField "String", 'NYTIMES_API_KEY', '"c072d5cb25b345e18bd508fe3cb90905"'
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    /*
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
     }
-    */
 }
 
 dependencies {
@@ -36,11 +38,9 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.1'
     compile 'com.android.support:design:25.1.1'
 
-
-    compile 'com.google.dagger:dagger:2.0'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.0'
-
     compile 'com.google.dagger:dagger:2.8'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
+
     provided 'org.glassfish:javax.annotation:10.0-b28'
 
     compile "io.reactivex.rxjava2:rxandroid:2.0.1"
@@ -54,21 +54,22 @@ dependencies {
     compile 'com.bluelinelabs:conductor:2.1.0'
     compile 'com.bluelinelabs:conductor-support:2.1.0'
 
-    compile 'com.squareup.okhttp3:okhttp:3.0.0-RC1'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.0.0-RC1'
+
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.0.1'
 
+    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
 
-    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
-    compile 'com.squareup.retrofit2:converter-moshi:2.0.0-beta3'
-    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
     compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
-    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+
+    compile 'com.f2prateek.rx.preferences2:rx-preferences:2.0.0-RC1'
 
     testCompile "org.mockito:mockito-core:2.2.2"
 
     testCompile 'junit:junit:4.12'
 
-    compile 'com.android.support:gridlayout-v7:25.1.1'
 }

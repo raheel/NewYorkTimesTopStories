@@ -1,5 +1,6 @@
 package com.example.newyorktimestopstories.injection;
 
+import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
@@ -15,11 +16,16 @@ import dagger.Provides;
  */
 
 @Module
-public class AndroidModule {
+public class StorageModule {
     @Provides
     @Singleton
-    RxSharedPreferences providesSharedPreferences(){
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        return RxSharedPreferences.create(preferences);
+    SharedPreferences providesSharedPreferences(Application application){
+        return PreferenceManager.getDefaultSharedPreferences(application);
+    }
+
+    @Provides
+    @Singleton
+    RxSharedPreferences providesRxSharedPreferences(Application application, SharedPreferences sharedPreferences){
+        return RxSharedPreferences.create(sharedPreferences);
     }
 }

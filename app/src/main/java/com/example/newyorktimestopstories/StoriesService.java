@@ -11,6 +11,6 @@ import retrofit2.http.Path;
  */
 
 public interface StoriesService {
-    @GET("/svc/topstories/v2/{section}")
+    @GET("/svc/topstories/v2/{section}.json")
     public Observable<StoriesResult> getTopStories(@Path("section") String section);
 }

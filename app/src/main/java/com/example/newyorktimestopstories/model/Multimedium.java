@@ -95,4 +95,17 @@ public class Multimedium {
         this.copyright = copyright;
     }
 
+    @Override
+    public String toString() {
+        return "Multimedium{" +
+                "url='" + url + '\'' +
+                ", format='" + format + '\'' +
+                ", height=" + height +
+                ", width=" + width +
+                ", type='" + type + '\'' +
+                ", subtype='" + subtype + '\'' +
+                ", caption='" + caption + '\'' +
+                ", copyright='" + copyright + '\'' +
+                '}';
+    }
 }
